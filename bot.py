@@ -5,8 +5,15 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 
-from config import BOT_TOKEN, ADMINS
+from aiogram import Bot, Dispatcher, executor, types
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+BOT_TOKEN = "8481849799:AAFakjETXmt6UxK411GSTo36QY6tTUASfZs"
+ADMINS = [6728678197]
+
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher(bot, storage=MemoryStorage())
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=BOT_TOKEN)
